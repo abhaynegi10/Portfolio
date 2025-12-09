@@ -136,7 +136,6 @@ function App() {
                   textAnchor='middle'
                   fill='white'
                   dominantBaseline='middle'
-                  fontFamily='Arial Black'
                 >
                   ABHAY
                 </text>
@@ -178,7 +177,7 @@ function App() {
               <h1 className="text-9xl -ml-20">Portfolio</h1>
             </div>
             img className ="w-150 h-auto absolute char -bottom-[25%] left-1/2 -translate-x-1/2" src = "./char4.png" alt="" /
-            <img className="w-150 h-auto absolute char -bottom-[150%] left-1/2 -translate-x-1/2 rotate-[-20deg]" src="./char4.png" alt="" />
+            <img className="w-150 h-auto absolute char -bottom-[150%] left-1/2 -translate-x-1/2 rotate-[-20deg]" src="./char3.png" alt="" />
 
           </div>
           <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
@@ -191,7 +190,7 @@ function App() {
         </div>
         <div id="projects" className=" w-full min-h-screen flex flex-col p-10 gap-16 items-center justify-center bg-black overflow-hidden">
           <h2 className="projects-heading text-8xl text-white top-10">
-            Projects
+            Hello People !! 
           </h2>
 
           <div className="container w-full max-w-7xl h-[70vh] flex items-center gap-10 ">
