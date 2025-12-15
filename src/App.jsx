@@ -5,8 +5,26 @@ import 'remixicon/fonts/remixicon.css';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import './index.css'
+import ProjectCarousel from './components/ProjectCarousel';
 
-
+const projectsData = [
+  {
+    imageSrc: "/projects/project1.png",
+    alt: "UniVibe", // Path relative to the 'public' folder
+    title: "Uni-Vibe",
+    description: "Developed UniVibe, a peer-to-peer anonymous video and text chat platform enabling users to connect randomly based on selected gender preferences."
+  },
+  {
+    imageSrc: "/projects/project2.png",
+    title: "Mobile Fitness App",
+    description: "Designed a cross-platform mobile app for tracking workouts, setting fitness goals, and connecting with a community of users."
+  },
+  {
+    imageSrc: "/projects/project3.png",
+    title: "Portfolio Website",
+    description: "The very website you are looking at now, built with React, Tailwind CSS, and GSAP for smooth, engaging animations."
+  }
+];
 
 function App() {
   let [showContent, setShowContent] = useState(false)
@@ -37,44 +55,44 @@ function App() {
   })
 
   useGSAP(() => {
-    if(!showContent) return;
-    gsap.to(".main",{
+    if (!showContent) return;
+    gsap.to(".main", {
       scale: 1,
       rotate: 0,
       duration: 2,
       delay: "-1",
       ease: "Expo.easeInOut",
     })
-    gsap.to(".sky",{
+    gsap.to(".sky", {
       scale: 1.1,
       rotate: 0,
       duration: 2.5,
       delay: "-1",
       ease: "Expo.easeInOut",
     })
-    gsap.to(".bg",{
+    gsap.to(".bg", {
       scale: 1.1,
       rotate: 0,
       duration: 2.5,
       delay: "-1",
       ease: "Expo.easeInOut",
     })
-    gsap.to(".char",{
+    gsap.to(".char", {
       scale: 1,
       rotate: 0,
       duration: 1.9,
-      bottom:'-25%',
+      bottom: '-25%',
       delay: "-1",
       ease: "Expo.easeInOut",
     })
-    gsap.to(".text",{
+    gsap.to(".text", {
       scale: 1,
       rotate: 0,
       duration: 2.3,
       delay: "-1",
       ease: "Expo.easeInOut",
     })
-    
+
 
     const main = document.querySelector(".main");
     main?.addEventListener("mousemove", function (e) {
@@ -93,34 +111,34 @@ function App() {
 
   }, [showContent])
 
-  useGSAP(() =>{
-    if(!showContent) return;
+  useGSAP(() => {
+    if (!showContent) return;
 
-    gsap.from(".projects-heading",{
+    gsap.from(".projects-heading", {
       y: 100,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: "#projects",
         scroller: ".main",
         start: "top 80%",
       }
     })
-     gsap.from(".limg, .carousel-container",{
+    gsap.from(".limg, .carousel-container", {
       y: 150,
       opacity: 0,
       duration: 1.2,
       stagger: 0.2,
       ease: "power3.out",
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: ".container",
         scroller: ".main",
         start: "top 75%",
       }
     });
-  
-  },[showContent]);
+
+  }, [showContent]);
   return (
     <>
       <div className='svg fixed top-0 left-0 z-[99] w-full h-screen overflow-hidden bg-[#000]'>
@@ -190,19 +208,16 @@ function App() {
         </div>
         <div id="projects" className=" w-full min-h-screen flex flex-col p-10 gap-16 items-center justify-center bg-black overflow-hidden">
           <h2 className="projects-heading text-8xl text-white top-10">
-            Hello People !! 
+            Hello People !!
           </h2>
 
           <div className="container w-full max-w-7xl h-[70vh] flex items-center gap-10 ">
             <div className="limg w-1/2 h-full relative">
-              <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3]" src="./imag.png" alt="" />
+              <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]" src="./imag.png" alt="" />
             </div>
-            <div className="carousel-container w-1/2 h-full bg-gray-900 rounded-lg p-4">
-              <div className="w-full h-full border-2 border-dashed border-gray-500 flex items-center justify-center">
-                <p className="text-gray-400">Carousel Goes Here</p>
-              </div>
+            <div className="carousel-container w-1/2 h-full">
+              <ProjectCarousel projects={projectsData} />
             </div>
-
           </div>
 
         </div>
