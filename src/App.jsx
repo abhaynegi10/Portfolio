@@ -201,7 +201,7 @@ function App() {
               <h1 className="text-7xl md:text-9xl md:ml-20">Design</h1>
               <h1 className="text-7xl md:text-9xl md:-ml-20">Portfolio</h1>
             </div>
-            <img className="w-150 h-auto absolute char -bottom-[150%] left-1/2 -translate-x-1/2 rotate-[-20deg]" src="./char3.png" alt="" />
+            <img className=" w-48 sm:w-60 md:w-100 lg:w-120 h-auto absolute char -bottom-[80%] md:-bottom-[140%] left-1/2 -translate-x-1/2 rotate-0 md:rotate-[-20deg]" src="./char3.png" alt="" />
 
           </div>
           <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
@@ -212,20 +212,29 @@ function App() {
 
           </div>
         </div>
-        <div id="projects" className=" w-full min-h-screen flex flex-col p-10 gap-16 items-center justify-center bg-black overflow-hidden">
-          <h2 className="projects-heading text-8xl text-white top-10">
+        <div id="about" className=" w-full min-h-screen flex flex-col p-10 gap-16 items-center justify-center bg-black overflow-hidden">
+          <h2 className="projects-heading text-8xl text-white top-10 ">
             Hello People !!
           </h2>
 
           {/*<div className="container w-full max-w-7xl h-[70vh] flex items-center gap-10 ">*/}
-            <div className="container h-auto lg:h-[70vh] flex flex-col lg:flex-row items-center gap-10">
+          <div className="container h-auto lg:h-[70vh] flex flex-col lg:flex-row items-center gap-10">
             {/*<div className="limg w-1/2 h-full relative">*/}
             <div className="limg w-full lg:w-1/2 h-[50vh] lg:h-full relative">
-              <img className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]" src="./imag.png" alt="" />
+              <img className=" w-150 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]" src="./imag.png" alt="" />
             </div>
             {/*<div className="carousel-container w-1/2 h-full">*/}
-            <div className="carousel-container w-full lg:w-1/2 h-[70vh] lg:h-full">
+            {/*<div className="carousel-container w-full lg:w-1/2 h-[70vh] lg:h-full">
               <ProjectCarousel projects={projectsData} />
+            </div>*/}
+            <div className="w-full lg:w-1/2 h-auto text-white flex flex-col justify-center text-center lg:text-left">
+              <h3 className="text-5xl font-bold mb-6">A Bit About Myself</h3>
+              <p className="text-lg text-gray-300 mb-4">
+                Hello! I'm a passionate web developer and designer with a love for creating dynamic, intuitive, and beautiful user experiences. My journey into the world of code started with a simple "Hello World," and has since evolved into a full-fledged passion for building things for the web.
+              </p>
+              <p className="text-lg text-gray-300">
+                I specialize in the MERN stack and love bringing ideas to life with modern tools like React, Tailwind CSS, and Framer Motion. When I'm not coding, you can find me exploring new design trends or contributing to open-source projects.
+              </p>
             </div>
           </div>
 
