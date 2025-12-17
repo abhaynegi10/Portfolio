@@ -173,8 +173,7 @@ function App() {
       </div>
       {showContent && <div className="main w-fullrotate-[-10deg] scale-[1.7]">
         <div className="landing overflow-hidden relative w-full h-screen bg-black relative">
-          {/*<div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10 flex justify-between text-white items-center">*/}
-          <div className="navbar absolute top-0 left-0 z-[10] w-full p-6 flex flex-col gap-4 text-center md:flex-row md:justify-between md:items-center md:p-10">
+          <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10 flex justify-between text-white items-center">
             <div className="logo">
               <div className="lines"></div>
               <h1 className='text-7xl text-white font-bold'>Welcome</h1>
@@ -190,18 +189,12 @@ function App() {
           <div className="imagesdiv relative overflow-hidden w-full h-screen">
             <img className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover" src="./sky.png" alt="" />
             <img className="absolute bg scale-[1.5] rotate-[-3deg] top-0 left-0 w-full h-full object-cover" src="./bg.png" alt="" />
-            {/* <div className="text text-white flex flex-col gap-0.5 absolute top-10 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-15deg]">
+             <div className="text text-white flex flex-col gap-0.5 absolute top-10 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-15deg]">
               <h1 className="text-9xl -ml-40">Grand</h1>
               <h1 className="text-9xl  ml-20">Design</h1>
               <h1 className="text-9xl -ml-20">Portfolio</h1>
-            </div> */}
-            {/* Responsive Hero Text */}
-            <div className="text text-white flex flex-col gap-0.5 absolute top-20 w-full px-4 text-center md:top-10 md:w-auto md:px-0 md:text-left md:left-1/2 md:-translate-x-1/2 scale-[1.4] rotate-[-15deg] ">
-              <h1 className="text-7xl md:text-9xl md:-ml-40">Grand</h1>
-              <h1 className="text-7xl md:text-9xl md:ml-20">Design</h1>
-              <h1 className="text-7xl md:text-9xl md:-ml-20">Portfolio</h1>
-            </div>
-            <img className=" w-48 sm:w-60 md:w-100 lg:w-120 h-auto absolute char -bottom-[80%] md:-bottom-[140%] left-1/2 -translate-x-1/2 rotate-0 md:rotate-[-20deg]" src="./char3.png" alt="" />
+            </div> 
+            <img className=" w-150 h-auto absolute char -bottom-[150%] left-1/2 -translate-x-1/2 rotate-[-20deg]" src="./char3.png" alt="" />
 
           </div>
           <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
@@ -218,15 +211,10 @@ function App() {
           </h2>
 
           {/*<div className="container w-full max-w-7xl h-[70vh] flex items-center gap-10 ">*/}
-          <div className="container h-auto lg:h-[70vh] flex flex-col lg:flex-row items-center gap-10">
-            {/*<div className="limg w-1/2 h-full relative">*/}
-            <div className="limg w-full lg:w-1/2 h-[50vh] lg:h-full relative">
+          <div className="container h-[70vh] flex items-center gap-10">
+            <div className="limg w-1/2 h-full relative">
               <img className=" w-150 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]" src="./imag.png" alt="" />
             </div>
-            {/*<div className="carousel-container w-1/2 h-full">*/}
-            {/*<div className="carousel-container w-full lg:w-1/2 h-[70vh] lg:h-full">
-              <ProjectCarousel projects={projectsData} />
-            </div>*/}
             <div className="w-full lg:w-1/2 h-auto text-white flex flex-col justify-center text-center lg:text-left">
               <h3 className="text-5xl font-bold mb-6">A Bit About Myself</h3>
               <p className="text-lg text-gray-300 mb-4">
