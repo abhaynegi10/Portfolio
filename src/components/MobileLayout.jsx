@@ -65,15 +65,14 @@ export default function MobileLayout() {
 
 
             {/* Mobile About Section */}
-            <div id="about" className="p-8 flex flex-col gap-6">
-                <h2 className="text-4xl font-bold text-center mb-4">Hello People !!</h2>
+            <div id="about" className="p-4 flex flex-col gap-3">
+                <h2 className="text-4xl font-bold text-center mt-10">Hello People !!</h2>
                 <div className="w-full rounded-lg overflow-hidden">
                     <img src="./imag.png" className="w-full object-cover" alt="Me" />
                 </div>
-                <div className="text-lg text-gray-300 text-center">
-                    <p>
-                        This is the mobile view.
-                        I'm a passionate web developer...
+                <div className=" w-full flex justify-center px-6">
+                    <p className=' max-w-prose text-left text-lg text-white leading-relaxed font-[Roboto-bold]'>
+                       I’m Abhay Negi, a creative full-stack developer and UI/UX designer who enjoys building visually engaging, user-focused web and mobile applications. I work across the MERN stack and Flutter to create responsive, high-performance products. With hands-on experience through real-world projects and an international full-stack internship, I focus on blending clean design, smooth interactions, and scalable architecture to deliver meaningful digital experiences.
                     </p>
                 </div>
             </div>

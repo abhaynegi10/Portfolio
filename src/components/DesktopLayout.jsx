@@ -91,7 +91,7 @@ export default function DesktopLayout() {
         <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10 flex justify-between text-white items-center">
           <div className="logo">
             <div className="lines"></div>
-            <h1 className='text-7xl text-white font-bold'>Welcome</h1>
+            <h1 className='text-8xl text-white font-bold'>Welcome</h1>
           </div>
           <div className="nav-links flex gap-8 ">
             <a href="#projects" className="hover:text-gray-300 transition-colors text-4xl text-white">Projects</a>
@@ -130,12 +130,10 @@ export default function DesktopLayout() {
             <img className="w-[600px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]" src="./imag.png" alt="" />
           </div>
           <div className="about-text w-full lg:w-1/2 h-auto text-white flex flex-col justify-center text-center lg:text-left">
-            <h3 className="text-5xl font-bold mb-6">A Bit About Myself</h3>
-            <p className="text-lg text-gray-300 mb-4">
-              Hello! I'm a passionate web developer and designer...
-            </p>
-            <p className="text-lg text-gray-300">
-              I specialize in the MERN stack...
+            <h3 className="text-4xl font-bold mb-6">A Bit About Myself</h3>
+            <p className="text-lg text-white mb-4 font-[Roboto-bold]">
+              I’m Abhay Negi, a creative full-stack developer and UI/UX designer who enjoys building visually engaging, user-focused web and mobile applications. I work across the MERN stack and Flutter to create responsive high-performance products. With hands-on experience through real-world projects and an international full-stack internship, I focus on blending clean design, smooth interactions, and scalable architecture to deliver meaningful digital experiences.
+            
             </p>
           </div>
         </div>
