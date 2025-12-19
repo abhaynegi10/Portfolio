@@ -4,7 +4,6 @@ import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectSlider from './ProjectSlider';
-import LightPillar from './LightPillar';
 
 gsap.registerPlugin(ScrollTrigger);
 
