@@ -3,11 +3,37 @@ import React from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectSlider from './ProjectSlider';
+import LightPillar from './LightPillar';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const projectsData = [
+  {
+    imageSrc: "/projects/project1.png",
+    title: "Uni-Vibe",
+    year: "2024",
+    category: "Full Stack",
+    description: "Developed a peer-to-peer anonymous video and text chat platform enabling users to connect randomly based on selected gender preferences. Built with React and WebRTC."
+  },
+  {
+    imageSrc: "/projects/project2.png",
+    title: "Fit-Track",
+    year: "",
+    category: "Mobile App",
+    description: "Designed a cross-platform mobile app for tracking workouts, setting fitness goals, and connecting with a community of users. Features real-time GPS tracking."
+  },
+  {
+    imageSrc: "/projects/project3.png",
+    title: "Portfolio",
+    year: "",
+    category: "Creative Dev",
+    description: "The interactive website you are looking at now. Featuring heavy animations, 3D tilt effects, and a custom design built with GSAP and Tailwind CSS."
+  }
+];
+
 export default function DesktopLayout() {
-  
+
   // This hook handles the Entry Animation (scaling up)
   useGSAP(() => {
     gsap.to(".main", {
@@ -111,7 +137,7 @@ export default function DesktopLayout() {
           {/* Fixed invalid w-150 to w-[600px] */}
           <img className="w-[450px] h-auto absolute char -bottom-[150%] left-1/2 -translate-x-1/2 rotate-[-20deg]" src="./char3.png" alt="" />
         </div>
-        
+
         <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
           <div className="flex gap-4 justify-center items-center">
             <i className="text-4xl ri-arrow-down-long-line animate-bounce"></i>
@@ -120,7 +146,7 @@ export default function DesktopLayout() {
         </div>
       </div>
 
-      <div id="about" className="w-full min-h-screen flex flex-col p-10 gap-16 items-center justify-center bg-black overflow-hidden">
+      <div id="about" className="relative w-full min-h-screen flex flex-col p-10 gap-16 items-center justify-center bg-black overflow-hidden">
         <h2 className="projects-heading text-8xl text-white top-10">
           Hello People !!
         </h2>
@@ -133,11 +159,36 @@ export default function DesktopLayout() {
             <h3 className="text-4xl font-bold mb-6">A Bit About Myself</h3>
             <p className="text-lg text-white mb-4 font-[Roboto-bold]">
               I’m Abhay Negi, a creative full-stack developer and UI/UX designer who enjoys building visually engaging, user-focused web and mobile applications. I work across the MERN stack and Flutter to create responsive high-performance products. With hands-on experience through real-world projects and an international full-stack internship, I focus on blending clean design, smooth interactions, and scalable architecture to deliver meaningful digital experiences.
-            
+
             </p>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-26 bg-gradient-to-t from-black via-gray to-transparent z-20 pointer-events-none"></div>
       </div>
+     {/* 
+        ======== NEW PROJECTS SECTION ======== 
+        id="projects" for navbar linking
+      */}
+      <div id="projects" className="w-full min-h-screen flex flex-col p-10 items-center justify-center bg-black overflow-hidden relative">
+        
+        {/* Floating Background Elements to merge styling */}
+        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-600/20 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-purple-600/20 blur-[100px] rounded-full"></div>
+
+        {/* Section Heading */}
+        <h2 className="text-8xl text-white mb-10 z-10">Projects</h2>
+
+        {/* 
+            Container for Slider
+            We rotate it +10deg to counter the Main -10deg.
+            This makes the carousel look straight/horizontal! 
+        */}
+        <div className="w-full scale-90 z-10">
+            <ProjectSlider projects={projectsData} />
+        </div>
+
+      </div>
+
     </div>
   );
 }
