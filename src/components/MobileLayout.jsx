@@ -1,5 +1,30 @@
 // src/components/MobileLayout.jsx
 import React from 'react';
+import MobileProjectSlider from './MobileProjectSlider';
+
+const projectsData = [
+  {
+    imageSrc: "/projects/project1.png",
+    title: "Uni-Vibe",
+    category: "Full Stack",
+    year: "2024", 
+    description: "Developed a peer-to-peer anonymous video and text chat platform enabling users to connect randomly based on selected gender preferences. Built with React and WebRTC."
+  },
+  {
+    imageSrc: "/projects/project2.png",
+    title: "Fit-Track",
+    category: "Mobile App",
+    year: "2023",
+    description: "Designed a cross-platform mobile app for tracking workouts, setting fitness goals, and connecting with a community of users. Features real-time GPS tracking."
+  },
+  {
+    imageSrc: "/projects/project3.png",
+    title: "Portfolio",
+    category: "Creative Dev",
+    year: "2025",
+    description: "The interactive website you are looking at now. Featuring heavy animations, 3D tilt effects, and a custom design built with GSAP and Tailwind CSS."
+  }
+];
 
 
 
@@ -60,6 +85,10 @@ export default function MobileLayout() {
                     alt=""
                     className="absolute bottom-[-10%] w-[240px] z-10"
                 />
+             
+
+        {/* --- ADD THE GRADIENT EFFECT HERE --- */}
+        <div className="absolute bottom-0 left-0 w-full h-44 bg-gradient-to-t from-black to-transparent pointer-events-none z-10"></div>
             </div>
 
 
@@ -76,6 +105,28 @@ export default function MobileLayout() {
                     </p>
                 </div>
             </div>
+            {/* Spacer for About scroll overlap */}
+      <div className="h-10 bg-black"></div>
+
+      {/* 4. MOBILE PROJECTS SECTION */}
+      <div id="projects" className="relative w-full min-h-[90vh] bg-black overflow-hidden flex flex-col pt-10">
+        
+
+        {/* SECTION HEADER */}
+        <div className="relative z-10 text-center px-4 mb-4">
+             <h2 className="text-5xl font-bold text-white mb-2 drop-shadow-md">Projects</h2>
+             <p className="font-[system-ui] text-gray-400 text-sm">Tap or swipe to explore</p>
+        </div>
+
+        {/* CAROUSEL CARD */}
+        <div className="relative z-20">
+             <MobileProjectSlider projects={projectsData} />
+        </div>
+
+        {/* BOTTOM GRADIENT (To fade out page bottom smoothly) */}
+        <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none z-10"></div>
+        
+      </div>
         </div>
     );
 }
